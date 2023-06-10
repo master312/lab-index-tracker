@@ -22,7 +22,7 @@ services:
     command: waitress-serve --port 5000 --call main:waitress_get_app # For prod
     volumes:
       - ./:/app
-      - lab-indexer-data:/app/src/instances
+      - lab-indexer-data:/app/src/instance
     ports:
       - 5000:5000
     environment:
