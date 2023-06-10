@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  git-puller:
+    image: alpine/git
+    volumes:
+      - ./:/app
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        if [ ! -d /app/.git ]; then
+          git clone https://github.com/master312/lab-index-tracker.git /app;
+        else
+          git -C /app pull;
+        fi
+        sleep infinity
+
+  flask:
+    build: ./
+#    command: flask run --host=0.0.0.0 # for dev
+    working_dir: /app/src
+    command: waitress-serve --port 5000 --call main:waitress_get_app # For prod
+    volumes:
+      - ./:/app
+      - lab-indexer-data:/app/src/instances
+    ports:
+      - 5000:5000
+    environment:
+      - FLASK_APP=/app/src/main.py
+    depends_on:
+      - git-puller
+
+volumes:
+  lab-indexer-data:

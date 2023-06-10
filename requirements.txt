@@ -3,3 +3,4 @@ flask_sqlalchemy
 requests
 flask_wtf
 flask_login
+waitress

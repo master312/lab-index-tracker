@@ -6,7 +6,7 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, URL
 from datetime import datetime
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates")
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///services.db"
 app.config["SECRET_KEY"] = "your-secret-key"
 db = SQLAlchemy(app)
@@ -105,8 +105,11 @@ def delete_service(service_id):
 with app.app_context():
     db.create_all()
 
-
 # For development only
 if __name__ == "__main__":
-    app.root_path = "./"
     app.run(debug=True, host="0.0.0.0", port=5000)
+
+
+# For production run
+def waitress_get_app():
+    return app
