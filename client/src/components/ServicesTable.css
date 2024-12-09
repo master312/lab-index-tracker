@@ -1,0 +1,171 @@
+.services-table-container {
+    margin: 2rem;
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.services-table th,
+.services-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.services-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.services-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.services-table tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.service-url {
+    color: #3182ce;
+    text-decoration: none;
+}
+
+.service-url:hover {
+    text-decoration: underline;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-online {
+    background-color: #def7ec;
+    color: #03543f;
+}
+
+.status-offline {
+    background-color: #fee2e2;
+    color: #9b1c1c;
+}
+
+.status-unknown {
+    background-color: #e5e7eb;
+    color: #4b5563;
+}
+
+.action-buttons {
+    white-space: nowrap;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn:last-child {
+    margin-right: 0;
+}
+
+.btn-ping {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-ping:hover {
+    background-color: #2563eb;
+}
+
+.btn-delete {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #dc2626;
+}
+
+.no-services {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+}
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-details {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.urls-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.url-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.status-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Add to AddServiceForm.css */
+.url-input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.remove-url-btn {
+    background-color: #ef4444;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-url-btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.urls-group {
+    margin-bottom: 1.5rem;
+}
