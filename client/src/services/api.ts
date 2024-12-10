@@ -1,4 +1,8 @@
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = import.meta.env.PROD
+  ? `${window.location.protocol}//${window.location.host}/api` // Will use current domain
+  : "http://localhost:8000/api"; // Development URL
+
+console.log(`Looking for api at ${API_BASE}`);
 
 export interface ServiceUrl {
   id: string;
