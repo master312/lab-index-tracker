@@ -1,5 +1,10 @@
 A hacky badly written with llm assist app to keep track of your private lab services
 
+### KNOWN BUG!
+- Https pings are broken
+
+---
+---
 ![shot.png](shot.png)
 
 # Development
